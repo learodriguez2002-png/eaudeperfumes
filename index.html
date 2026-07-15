@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eau de Perfumes | Réplicas de Alta Gama</title>
+    
+    <!-- Google Fonts: Elegant Playfair Display and Clean Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght=200..800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxe: {
+                            gold: '#D4AF37',       /* Oro clásico */
+                            goldlight: '#F3E5AB',  /* Oro suave */
+                            dark: '#0D0D0D',       /* Negro premium */
+                            charcoal: '#1A1A1A',   /* Gris ultra oscuro */
+                            cream: '#FDFBF7',      /* Crema de fondo */
+                            softgray: '#F5F5F3',   /* Gris claro */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Gradiente dorado premium para títulos */
+        .gold-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Barra de scroll personalizada de lujo */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0D0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BF953F;
+            border-radius: 3px;
+        }
+
+        /* Máscaras de recorte en diagonal para la comparativa visual */
+        /* Réplica: Se ubica abajo y a la izquierda */
+        .replica-clip {
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+        }
+        /* Perfume Original: Se ubica arriba y a la derecha */
+        .original-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+    </style>
+</head>
+<body class="bg-luxe-cream font-sans text-luxe-dark antialiased overflow-x-hidden">
+
+    <!-- Barra de anuncios destacando envíos y métodos de pago -->
+    <div class="bg-luxe-gold text-luxe-dark text-center py-2 px-4 text-xs tracking-wider font-semibold">
+        <i class="fa-solid fa-credit-card mr-1"></i> Aceptamos Mercado Pago, Transferencias y Efectivo
+    </div>
+
+    <!-- Contenedor flotante para notificaciones tipo Toast -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Encabezado Principal / Navbar (Sticky en la parte superior) -->
+    <header class="sticky top-0 z-40 bg-luxe-dark/95 backdrop-blur-md border-b border-luxe-gold/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Botón de menú para celulares -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white hover:text-luxe-gold transition-colors focus:outline-none" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+
+                <!-- Identidad de la Marca (Estilo minimalista de lujo, sin logotipo cargado de imagen) -->
+                <div class="flex-shrink-0 flex flex-col items-center">
+                    <a href="#" class="flex flex-col items-center">
+                        <span class="font-serif tracking-[0.2em] text-2xl sm:text-3xl font-light text-gold-gradient">EAU DE PERFUMES</span>
+                        <span class="text-[9px] tracking-[0.4em] text-stone-400 -mt-1 uppercase">Inspiraciones de Alta Gama</span>
+                    </a>
+                </div>
+
+                <!-- Navegación para computadoras de escritorio -->
+                <nav class="hidden md:flex space-x-8 text-xs tracking-[0.2em] font-medium">
+                    <a href="#inicio" class="hover:text-luxe-gold transition-colors uppercase py-2 border-b border-transparent hover:border-luxe-gold/50">Inicio</a>
+                    <a href="#catalogo" class="hover:text-luxe-gold transition-colors uppercase py-2 border-b border-transparent hover:border-luxe-gold/50">Catálogo</a>
+                    <a href="#contacto" class="hover:text-luxe-gold transition-colors uppercase py-2 border-b border-transparent hover:border-luxe-gold/50">Contacto</a>
+                </nav>
+
+                <!-- Área de Utilidades / WhatsApp directo -->
+                <div class="flex items-center space-x-5">
+                    <a href="https://wa.me/5492954599491" target="_blank" class="flex items-center text-xs tracking-wider text-luxe-gold hover:text-white transition-colors" title="Escribinos por WhatsApp">
+                        <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+                        <span class="font-semibold">2954-599491</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú desplegable para celulares -->
+        <div id="mobile-menu" class="hidden md:hidden bg-luxe-charcoal border-b border-luxe-gold/20">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3 text-center">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-sm tracking-[0.15em] hover:bg-luxe-dark hover:text-luxe-gold transition-all">INICIO</a>
+                <a href="#catalogo" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-sm tracking-[0.15em] hover:bg-luxe-dark hover:text-luxe-gold transition-all">CATÁLOGO</a>
+                <a href="#contacto" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-sm tracking-[0.15em] hover:bg-luxe-dark hover:text-luxe-gold transition-all">CONTACTO</a>
+                <a href="https://wa.me/5492954599491" target="_blank" class="block px-3 py-3 text-luxe-gold font-bold text-sm tracking-[0.15em] hover:bg-luxe-dark transition-all">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> WHATSAPP: 2954599491
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Portada / Hero Banner -->
+    <section id="inicio" class="relative h-[80vh] bg-luxe-dark flex items-center justify-center overflow-hidden">
+        <!-- Fondo cinematográfico dinámico con una imagen de alta resolución -->
+        <div class="absolute inset-0 opacity-45 mix-blend-multiply bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1920');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-luxe-dark via-transparent to-luxe-dark/70"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+            <span class="text-luxe-gold text-xs sm:text-sm tracking-[0.35em] font-medium uppercase mb-4 opacity-90 block animate-pulse">Inspiraciones & Réplicas Importadas</span>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl text-white font-light tracking-wide leading-tight mb-6">
+                Tu Fragancia Favorita <br><span class="italic text-gold-gradient font-normal">Al Mejor Precio</span>
+            </h1>
+            <p class="text-stone-300 text-sm sm:text-base md:text-lg max-w-xl font-light tracking-wide leading-relaxed mb-10">
+                Llevar tu aroma favorito ahora es posible. Alternativas premium inspiradas en las marcas más exclusivas del mundo.
+            </p>
+            
+            <!-- Pastillas rápidas con los precios y tamaños estándar del negocio -->
+            <div class="flex flex-wrap gap-3 justify-center mb-10 text-white text-xs tracking-wider">
+                <span class="bg-luxe-charcoal/80 border border-luxe-gold/30 px-4 py-2 rounded-full">Versión <strong>30 ml</strong>: <span class="text-luxe-gold font-bold">$12.000</span></span>
+                <span class="bg-luxe-charcoal/80 border border-luxe-gold/30 px-4 py-2 rounded-full">Versión <strong>50 ml</strong>: <span class="text-luxe-gold font-bold">$18.000</span></span>
+            </div>
+
+            <!-- Botones de Acción Rápida -->
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-md">
+                <a href="#catalogo" class="px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] bg-white text-luxe-dark hover:bg-luxe-gold hover:text-white transition-all duration-300 shadow-xl rounded-sm w-full sm:w-auto text-center">
+                    Ver Catálogo
+                </a>
+                <a href="#contacto" class="px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] border border-white text-white hover:bg-white/10 transition-all duration-300 rounded-sm w-full sm:w-auto text-center">
+                    Cómo Comprar
+                </a>
+            </div>
+        </div>
+
+        <!-- Indicador de desplazamiento (Scroll down) -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/50 animate-bounce">
+            <span class="text-[9px] uppercase tracking-[0.2em] mb-1">Deslizar</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo de Productos -->
+    <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-[0.3em] text-luxe-gold font-semibold">Nuestras Alternativas</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-light tracking-wide text-luxe-dark mt-2">Catálogo de Réplicas</h2>
+            <div class="w-12 h-[1px] bg-luxe-gold mx-auto mt-4"></div>
+            <p class="text-stone-500 text-sm mt-4">
+                Disfrutá una comparativa directa de nuestras alternativas premium. Observá el perfume de diseñador original en la esquina superior derecha y elegí tu presentación favorita.
+            </p>
+        </div>
+
+        <!-- Barra de filtros y buscador en vivo -->
+        <div class="flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 mb-10 bg-white p-4 rounded-lg shadow-sm border border-stone-100">
+            <!-- Botones de filtrado rápido por categoría -->
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
+                <button onclick="setFilter('all')" class="filter-btn active px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-luxe-dark text-white rounded transition-all">Todos</button>
+                <button onclick="setFilter('Mujer')" class="filter-btn px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-stone-100 hover:bg-stone-200 text-stone-700 rounded transition-all">Damas</button>
+                <button onclick="setFilter('Hombre')" class="filter-btn px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-stone-100 hover:bg-stone-200 text-stone-700 rounded transition-all">Caballeros</button>
+                <button onclick="setFilter('Unisex')" class="filter-btn px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-stone-100 hover:bg-stone-200 text-stone-700 rounded transition-all">Unisex</button>
+            </div>
+
+            <!-- Campo de búsqueda en vivo -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-grow">
+                    <input type="text" id="catalog-search" oninput="searchPerfumes()" placeholder="Buscar perfume, marca, notas olfativas..." class="w-full bg-stone-50 border border-stone-200 text-sm py-2 pl-9 pr-4 rounded focus:outline-none focus:ring-1 focus:ring-luxe-gold focus:border-luxe-gold">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 text-xs"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Dinámico de Productos -->
+        <div id="perfume-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Las tarjetas se inyectan en este bloque dinámicamente -->
+        </div>
+
+        <!-- Mensaje de error para búsquedas sin resultados -->
+        <div id="no-results" class="hidden text-center py-20 bg-white rounded-lg border border-dashed border-stone-300">
+            <i class="fa-solid fa-circle-question text-stone-300 text-5xl mb-4"></i>
+            <h3 class="font-serif text-xl text-luxe-dark font-medium">No se encontraron fragancias</h3>
+            <p class="text-sm text-stone-500 mt-1">Intentá buscando con términos como "Dior", "Chanel" o familias aromáticas.</p>
+            <button onclick="clearSearch()" class="mt-4 px-4 py-2 bg-luxe-dark text-white rounded text-xs tracking-wider uppercase hover:bg-luxe-gold transition-colors">Ver catálogo completo</button>
+        </div>
+    </main>
+
+    <!-- Sección Informativa de Compra y Ubicación -->
+    <section id="contacto" class="py-20 bg-luxe-cream">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-lg p-8 sm:p-12 shadow-xl border border-stone-100 text-center">
+                <span class="text-xs uppercase tracking-[0.3em] text-luxe-gold font-bold">Ubicados en Santa Rosa, La Pampa</span>
+                <h2 class="font-serif text-3xl text-luxe-dark mt-2 mb-4">¿Cómo coordino mi compra?</h2>
+                <p class="text-stone-600 text-sm max-w-lg mx-auto mb-8 font-light">
+                    ¡Es muy simple! Elegí tus fragancias en el catálogo, seleccioná la capacidad que más te guste (30 ml o 50 ml) y presioná el botón de pedir por WhatsApp. 
+                    Serás redirigido automáticamente a nuestro WhatsApp con tu consulta directa para que definamos el método de pago y retiro local.
+                </p>
+
+                <!-- Tarjetas informativas de servicios de pago y retiro -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mb-8">
+                    <div class="p-4 bg-luxe-softgray rounded border border-stone-100">
+                        <i class="fa-solid fa-location-dot text-2xl text-luxe-gold mb-2"></i>
+                        <h4 class="font-medium text-sm text-luxe-dark">Retiro Local</h4>
+                        <p class="text-stone-500 text-xs mt-1 font-light">Coordinamos de inmediato para que retires tu perfume de manera presencial en Santa Rosa.</p>
+                    </div>
+                    <div class="p-4 bg-luxe-softgray rounded border border-stone-100">
+                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-600 mb-2"></i>
+                        <h4 class="font-medium text-sm text-luxe-dark">Atención Directa</h4>
+                        <p class="text-stone-500 text-xs mt-1 font-light">Consultanos o escribinos al instante al 2954-599491.</p>
+                    </div>
+                    <div class="p-4 bg-luxe-softgray rounded border border-stone-100">
+                        <i class="fa-solid fa-wallet text-2xl text-luxe-gold mb-2"></i>
+                        <h4 class="font-medium text-sm text-luxe-dark">Medios de Pago</h4>
+                        <p class="text-stone-500 text-xs mt-1 font-light">Aceptamos transferencias bancarias, Mercado Pago y Efectivo.</p>
+                    </div>
+                </div>
+
+                <!-- Botón de consulta general directa -->
+                <a href="https://wa.me/5492954599491" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded font-bold uppercase tracking-wider text-xs hover:bg-emerald-700 transition-colors shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Consultar Directo por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Detalles del Perfume y Notas Olfativas -->
+    <div id="detail-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Fondo de desenfoque oscuro -->
+            <div onclick="closeDetailModal()" class="fixed inset-0 bg-luxe-dark/80 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <!-- Contenedor del panel del Modal -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full border border-stone-100">
+                <!-- Botón de Cerrar Modal -->
+                <button onclick="closeDetailModal()" class="absolute top-4 right-4 text-stone-400 hover:text-luxe-dark transition-colors z-10 w-8 h-8 flex items-center justify-center rounded-full bg-stone-100/50 hover:bg-stone-100 focus:outline-none" aria-label="Cerrar ventana">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+
+                <div class="p-6 sm:p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Vista de Imagen Diagonal de Detalle en el Modal -->
+                        <div class="relative aspect-square bg-stone-50 rounded overflow-hidden border border-stone-100">
+                            <div class="w-full h-full relative overflow-hidden">
+                                <!-- Original (Arriba / Derecha) -->
+                                <img id="modal-img-original" src="" alt="Diseño Original" class="absolute inset-0 w-full h-full object-cover original-clip transition-transform duration-700">
+                                <!-- Réplica (Abajo / Izquierda) -->
+                                <img id="modal-img-replica" src="" alt="Nuestra Réplica" class="absolute inset-0 w-full h-full object-cover replica-clip transition-transform duration-700" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600'">
+                                
+                                <!-- Divisor diagonal color Oro Real -->
+                                <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom right, transparent calc(50% - 1.5px), #D4AF37 50%, transparent calc(50% + 1.5px));"></div>
+                                
+                                <!-- Etiquetas de la división visual -->
+                                <span class="absolute bottom-3 left-3 bg-luxe-dark/95 text-luxe-gold text-[8px] tracking-[0.2em] uppercase font-bold px-2 py-1 rounded border border-luxe-gold/30 shadow-md">Réplica</span>
+                                <span class="absolute top-3 right-3 bg-white/95 text-stone-900 text-[8px] tracking-[0.2em] uppercase font-bold px-2 py-1 rounded border border-stone-200 shadow-md">Original</span>
+                            </div>
+                            
+                            <!-- Categoría -->
+                            <span id="modal-product-tag" class="absolute top-3 left-3 px-3 py-1 bg-luxe-dark/85 text-luxe-gold text-[10px] tracking-wider uppercase font-semibold rounded-full border border-luxe-gold/30">Línea</span>
+                        </div>
+
+                        <!-- Detalles Técnicos y Botones de Compra -->
+                        <div class="flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-stone-400 font-medium" id="modal-product-brand">Inspiración</span>
+                                <h3 class="font-serif text-3xl font-light text-luxe-dark mt-1" id="modal-product-name">Cargando Nombre</h3>
+                                
+                                <!-- Selector de tamaño en el modal -->
+                                <div class="mt-4">
+                                    <span class="block text-[10px] uppercase tracking-wider font-semibold text-stone-500 mb-2">Seleccionar Volumen</span>
+                                    <div class="flex gap-2">
+                                        <button id="modal-size-30" onclick="setModalSize(30)" class="flex-grow py-2 border rounded text-xs tracking-wider uppercase font-semibold transition-all">
+                                            30 ml <br><span class="text-[10px] text-stone-400 font-normal">$12.000</span>
+                                        </button>
+                                        <button id="modal-size-50" onclick="setModalSize(50)" class="flex-grow py-2 border rounded text-xs tracking-wider uppercase font-semibold transition-all">
+                                            50 ml <br><span class="text-[10px] text-stone-400 font-normal">$18.000</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <p class="text-luxe-dark font-serif text-2xl font-light mt-4" id="modal-product-price">$0.00</p>
+                                <p class="text-[10px] text-emerald-600 font-bold tracking-wider mt-1"><i class="fa-solid fa-check"></i> Pagá con Mercado Pago o Transferencia</p>
+                                <p class="text-xs text-stone-600 mt-3 leading-relaxed font-light" id="modal-product-desc">Cargando descripción...</p>
+                                
+                                <!-- Pirámide de notas olfativas -->
+                                <div class="mt-4 border-t border-b border-stone-100 py-4 space-y-2">
+                                    <h4 class="text-xs uppercase tracking-widest text-luxe-dark font-semibold">Notas del Aroma</h4>
+                                    <div class="space-y-1.5">
+                                        <div class="flex items-start gap-2">
+                                            <span class="bg-amber-100 text-amber-800 text-[8px] px-1 py-0.5 rounded uppercase font-bold tracking-wider">Salida</span>
+                                            <span class="text-xs text-stone-700 font-light" id="modal-notes-top">Notas iniciales.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="bg-rose-100 text-rose-800 text-[8px] px-1 py-0.5 rounded uppercase font-bold tracking-wider">Corazón</span>
+                                            <span class="text-xs text-stone-700 font-light" id="modal-notes-heart">Notas de evolución media.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="bg-stone-100 text-stone-800 text-[8px] px-1 py-0.5 rounded uppercase font-bold tracking-wider">Fondo</span>
+                                            <span class="text-xs text-stone-700 font-light" id="modal-notes-base">Base y fijación.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botón de Pedir directo al Whatsapp -->
+                            <button id="modal-add-btn" class="mt-6 w-full py-3 bg-emerald-600 text-white rounded font-bold text-xs tracking-[0.2em] uppercase hover:bg-emerald-700 transition-colors duration-300 flex items-center justify-center">
+                                <i class="fa-brands fa-whatsapp mr-2 text-base"></i> Pedir por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-luxe-dark text-stone-300 pt-16 pb-8 border-t border-luxe-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <!-- Columna 1: Quiénes somos / Descargo legal de similitudes -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <span class="font-serif tracking-[0.2em] text-2xl font-light text-white mb-2">EAU DE PERFUMES</span>
+                <p class="text-xs text-stone-400 tracking-wider mb-6 leading-relaxed font-light">
+                    Inspiraciones y alternativas de alta gama de tus fragancias favoritas. No poseemos marcas registradas originales; nuestras creaciones son interpretaciones olfativas libres de comercialización oficial.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/5492954599491" target="_blank" class="w-8 h-8 rounded-full border border-stone-700 flex items-center justify-center text-stone-400 hover:text-luxe-gold hover:border-luxe-gold transition-all" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-stone-700 flex items-center justify-center text-stone-400 hover:text-luxe-gold hover:border-luxe-gold transition-all" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Atajos del Sitio -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4 font-serif italic">Secciones</h4>
+                <ul class="space-y-2 text-xs font-light">
+                    <li><a href="#inicio" class="hover:text-luxe-gold transition-colors">Volver Arriba</a></li>
+                    <li><a href="#catalogo" class="hover:text-luxe-gold transition-colors">Catálogo Completo</a></li>
+                    <li><a href="#contacto" class="hover:text-luxe-gold transition-colors">Ubicación y Entregas</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Información de Formatos -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4">Información de Tamaños</h4>
+                <p class="text-stone-400 text-xs leading-relaxed mb-4 font-light">Disponemos de dos formatos de envase para adaptarnos a tus preferencias de uso diario:</p>
+                <ul class="space-y-2 text-xs">
+                    <li><span class="text-luxe-gold font-semibold">Versión 30 ml:</span> $12.000</li>
+                    <li><span class="text-luxe-gold font-semibold">Versión 50 ml:</span> $18.000</li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Canal de Soporte Directo -->
+            <div class="text-center md:text-left font-serif">
+                <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4 font-sans">Contacto Concierge</h4>
+                <p class="text-xs text-stone-400 mb-4 font-sans font-light">¿Tenés dudas sobre las equivalencias aromáticas o necesitás asesoramiento personalizado? Conversá con nosotros:</p>
+                <a href="https://wa.me/5492954599491" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded text-xs font-semibold uppercase tracking-wider hover:bg-emerald-700 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Chatear: 2954599491
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-stone-500">
+            <p>&copy; 2026 Eau de Perfumes. Santa Rosa, La Pampa, Argentina. Todos los derechos reservados.</p>
+            <div class="flex space-x-4">
+                <span class="text-stone-500">Sin logotipo comercial original. Todas las inspiraciones pertenecen a sus respectivos creadores.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica de Negocio y Controladores de Interfaz -->
+    <script>
+        // Base de Datos unificada de Perfumes (Femeninos, Masculinos e Unisex) con Imágenes Reales y Notas Aromáticas
+        const perfumes = [
+            // --- LÍNEA FEMENINA (21 Perfumes con sus notas olfativas e imágenes de diseñador reales) ---
+            {
+                id: 1,
+                name: "212 Heroes For Her",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Mujer",
+                family: "Floral Frutal",
+                desc: "Inspiración juvenil, audaz y efervescente. Un torbellino floral de celebración que rinde tributo a la libertad con notas chispeantes de frambuesa y mandarina.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Frambuesa, Mandarina, Acordes Cítricos",
+                    heart: "Jazmín, Flor de Azahar del Naranjo",
+                    base: "Sándalo, Cedro"
+                }
+            },
+            {
+                id: 2,
+                name: "212 NYC Women",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Mujer",
+                family: "Almizcle Floral Amaderado",
+                desc: "Una fragancia icónica que captura el pulso urbano de Nueva York. Un aroma floral moderno y fresco cargado de pétalos blancos sobre una base sumamente sensual.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Flor de Azahar del Naranjo, Mandarina, Flor de Cactus, Bergamota",
+                    heart: "Camelia Blanca, Azucena, Gardenia, Jazmín, Rosa, Fresia",
+                    base: "Sándalo, Almizcle Blanco"
+                }
+            },
+            {
+                id: 3,
+                name: "Amor Amor",
+                brand: "Inspirado en Cacharel",
+                gender: "Mujer",
+                family: "Floral Frutal",
+                desc: "El aroma pasional del amor joven. Una combinación magnética de grosellas negras ácidas y cítricos frescos, fundiéndose en un corazón dulce de jazmín y lirio.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Grosellas Negras, Naranja Sanguínea, Mandarina, Cassia",
+                    heart: "Rosa, Albaricoque, Jazmín, Azucena",
+                    base: "Vainilla, Haba Tonka, Almizcle, Ámbar"
+                }
+            },
+            {
+                id: 4,
+                name: "Light Blue",
+                brand: "Inspirado en Dolce & Gabbana",
+                gender: "Mujer",
+                family: "Floral Frutal Cítrico",
+                desc: "Toda la brisa del verano mediterráneo en un solo aroma. Frescura de limón de Sicilia y manzanas verdes que transmite libertad, vitalidad y un estilo sumamente fresco.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Limón de Sicilia, Manzana Verde, Campánula, Cedro",
+                    heart: "Bambú, Jazmín, Rosa Blanca",
+                    base: "Madera de Cedro, Ámbar, Almizcle"
+                }
+            },
+            {
+                id: 5,
+                name: "Idôle Aura",
+                brand: "Inspirado en Lancôme",
+                gender: "Mujer",
+                family: "Almizcle Floral Limpio",
+                desc: "Un tributo a la fuerza colectiva de las mujeres. Una combinación luminosa de rosa solar, un toque mineral de sal marina y la calidez de una exquisita vainilla.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1615655404745-a106e570f005?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Sal Marina, Rosa de Isparta, Rosa Centifolia",
+                    heart: "Jazmín Sambac, Acordes Solares",
+                    base: "Vainilla de Madagascar, Almizcle Blanco"
+                }
+            },
+            {
+                id: 6,
+                name: "Fame",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Mujer",
+                family: "Almizcle Floral Amaderado",
+                desc: "Vanguardista, sumamente refinada y lúdica. Una composición exquisita con notas exóticas de mango maduro entrelazadas con un jazmín excepcionalmente puro.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Mango Exótico, Bergamota Fresca",
+                    heart: "Jazmín Puro, Incienso Cremoso",
+                    base: "Sándalo, Vainilla Dulce"
+                }
+            },
+            {
+                id: 7,
+                name: "Flower",
+                brand: "Inspirado en Kenzo",
+                gender: "Mujer",
+                family: "Oriental Floral Empolvado",
+                desc: "El aroma poético de la amapola en la gran ciudad. Una fragancia atemporal, envolvente y dulce centrada en violetas de Parma, rosa de Bulgaria y almizcles limpios.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Rosa de Bulgaria, Flor del Espino, Grosellas Negras, Mandarina",
+                    heart: "Violeta de Parma, Jazmín, Opopónaco, Rosa",
+                    base: "Almizcle Blanco, Vainilla, Incienso"
+                }
+            },
+            {
+                id: 8,
+                name: "Good Girl",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Mujer",
+                family: "Floral Oriental Dulce",
+                desc: "La dualidad femenina capturada en un aroma seductor. El dulzor misterioso del jazmín combinado con notas intensamente ricas de cacao, café y haba tonka.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Almendra, Café, Bergamota, Limón",
+                    heart: "Jazmín Sambac, Nardos, Flor de Azahar",
+                    base: "Haba Tonka, Cacao, Sándalo, Vainilla de Madagascar"
+                }
+            },
+            {
+                id: 9,
+                name: "Idôle",
+                brand: "Inspirado en Lancôme",
+                gender: "Mujer",
+                family: "Chipre Floral Limpio",
+                desc: "La delicadeza y potencia de las mujeres que lideran el futuro. Una fragancia sumamente limpia estructurada en base a rosas frescas, jazmín radiante y almizcles blancos.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "idole-2-2e10fe42e2cef0984c17141695927454-480-0.webp",
+                notes: {
+                    top: "Pera Jugosa, Bergamota de Calabria",
+                    heart: "Rosa de Isparta, Rosa Centifolia, Jazmín de la India",
+                    base: "Almizcle Blanco, Vainilla Cremosa"
+                }
+            },
+            {
+                id: 10,
+                name: "J'adore",
+                brand: "Inspirado en Dior",
+                gender: "Mujer",
+                family: "Floral Frutal Opulento",
+                desc: "Un buqué floral sofisticado y opulento. La representación de la feminidad clásica y sensual, combinando ylang-ylang de las Comoras, rosa damascena y jazmín sambac.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Pera, Melón, Magnolia, Melocotón, Mandarina",
+                    heart: "Jazmín, Nardos, Fresia, Rosa de Damasco, Orquídea",
+                    base: "Almizcle, Vainilla, Mora, Cedro"
+                }
+            },
+            {
+                id: 11,
+                name: "La Vie Est Belle",
+                brand: "Inspirado en Lancôme",
+                gender: "Mujer",
+                family: "Floral Frutal Gourmand",
+                desc: "Un tributo de felicidad absoluta. El dulce aroma que equilibra la elegancia del iris con un fondo delicioso y cremoso de praliné tostado y vainilla fina.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Grosellas Negras, Pera Dulce",
+                    heart: "Iris Pallida, Jazmín, Flor de Azahar del Naranjo",
+                    base: "Praliné, Vainilla, Pachulí, Haba Tonka"
+                }
+            },
+            {
+                id: 12,
+                name: "Lady Million",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Mujer",
+                family: "Floral Frutal Dulce",
+                desc: "Atrevida, sumamente glamorosa e irresistible. Un acorde vibrante de neroli fresco y naranja amarga sobre una base sumamente adictiva de miel de flores y pachulí.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Frambuesa, Neroli, Limón de Amalfi",
+                    heart: "Jazmín Sambac, Flor de Azahar, Gardenia",
+                    base: "Miel Dulce, Pachulí, Ámbar"
+                }
+            },
+            {
+                id: 13,
+                name: "My Way",
+                brand: "Inspirado en Giorgio Armani",
+                gender: "Mujer",
+                family: "Floral Radiante",
+                desc: "Un buqué de flores blancas que simboliza la elegancia y las conexiones. Combina nardos intensos de la India con la frescura cítrica del azahar egipcio.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Flor de Azahar de Egipto, Bergamota de Calabria",
+                    heart: "Nardos de la India, Jazmín de la India",
+                    base: "Vainilla de Madagascar, Almizcle Blanco, Cedro de Virginia"
+                }
+            },
+            {
+                id: 14,
+                name: "Angel Nova",
+                brand: "Inspirado en Mugler",
+                gender: "Mujer",
+                family: "Ámbar Floral Frutal",
+                desc: "Inspiración superlativa y ultra femenina. Fusiona la irresistible dulzura de la frambuesa ácida con una rosa de mayo reinventada por biotecnología.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Frambuesa Silvestre, Lichi Exótico",
+                    heart: "Rosa Damascena de Supra-reciclado",
+                    base: "Akigalawood, Benjuí"
+                }
+            },
+            {
+                id: 15,
+                name: "Chanel N°5",
+                brand: "Inspirado en Chanel",
+                gender: "Mujer",
+                family: "Floral Aldehídico Clásico",
+                desc: "La leyenda indiscutida de la perfumería mundial. Una fórmula abstracta y jabonosa, sumamente elegante, con acordes de aldehídos, ylang-ylang, sándalo y almizcle.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1615655404745-a106e570f005?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Aldehídos, Ylang-Ylang, Neroli, Bergamota, Limón",
+                    heart: "Iris, Jazmín, Rosa, Raíz de Lirio, Lirio de los Valles",
+                    base: "Algalia, Sándalo, Ámbar, Pachulí, Almizcle, Vainilla"
+                }
+            },
+            {
+                id: 16,
+                name: "Olympéa",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Mujer",
+                family: "Oriental Vainilla Salada",
+                desc: "El aroma que rinde culto a una diosa griega moderna. Un contraste fascinante entre la frescura de la mandarina y un audaz acorde de vainilla salada y ámbar gris.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Jazmín de Agua, Mandarina Verde, Flor de Jengibre",
+                    heart: "Vainilla Salada",
+                    base: "Ámbar Gris, Madera de Cachemira, Sándalo"
+                }
+            },
+            {
+                id: 17,
+                name: "Black Opium",
+                brand: "Inspirado en Yves Saint Laurent",
+                gender: "Mujer",
+                family: "Oriental Vainilla de Café",
+                desc: "Sumamente adictivo, misterioso e hipnótico. Un golpe de energía que equilibra las notas oscuras del café negro con un buqué floral dulce y vainilla sensual.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Pera, Flor de Azahar del Naranjo, Pimienta Rosa",
+                    heart: "Café, Jazmín Sambac, Almendra Amarga, Regaliz",
+                    base: "Vainilla de Madagascar, Pachulí, Cedro"
+                }
+            },
+            {
+                id: 18,
+                name: "Pure XS For Her",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Mujer",
+                family: "Oriental Floral Provocativo",
+                desc: "Una fragancia sumamente magnética y provocadora. Juega con la tensión entre una vainilla ardiente, flor de cananga y un exótico acorde crujiente de pochoclo.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Palomitas de Maíz (Pochoclo), Flor de Cananga",
+                    heart: "Vainilla Especiada, Coco, Melocotón",
+                    base: "Almizcle Blanco, Sándalo, Amberwood"
+                }
+            },
+            {
+                id: 19,
+                name: "Scandal Fem",
+                brand: "Inspirado en Jean Paul Gaultier",
+                gender: "Mujer",
+                family: "Chipre Floral Goloso",
+                desc: "Una sobredosis de placer y atrevimiento sofisticado. El icónico aroma de gardenias y naranjas sanguíneas bañadas en una exquisita y cremosa miel tibia.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Naranja Sanguínea, Mandarina Cítrica",
+                    heart: "Miel Dulce, Gardenia, Jazmín, Flor de Azahar",
+                    base: "Pachulí, Cera de Abeja, Caramelo, Regaliz"
+                }
+            },
+            {
+                id: 20,
+                name: "Sì",
+                brand: "Inspirado en Giorgio Armani",
+                gender: "Mujer",
+                family: "Chipre Frutal Elegante",
+                desc: "El homenaje definitivo a la gracia y fuerza de la mujer moderna. Un néctar delicioso de grosellas negras sobre un fondo maderoso sumamente chic y duradero.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Néctar de Grosellas Negras, Bergamota",
+                    heart: "Rosa de Mayo, Fresia Elegante",
+                    base: "Madera de Rubia, Pachulí, Vainilla, Ambroxan"
+                }
+            },
+            {
+                id: 21,
+                name: "Very Good Girl",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Mujer",
+                family: "Floral Frutal Audaz",
+                desc: "Una interpretación atrevida y sumamente traviesa. Despliega la jugosa acidez de la grosella roja y el lichi exótico sobre un corazón seductor de rosas rojas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Grosella Roja, Lichi Exótico",
+                    heart: "Rosa Roja de Mayo",
+                    base: "Vetiver, Vainilla Dulce"
+                }
+            },
+
+            // --- LÍNEA MASCULINA (17 Perfumes de Caballeros con Imágenes Reales del Diseñador) ---
+            {
+                id: 22,
+                name: "Bad Boy",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Hombre",
+                family: "Ámbar Especiada",
+                desc: "Una fragancia audaz y sumamente sofisticada que representa la mítica dualidad del hombre moderno, rebelde y cautivador.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Pimienta Negra, Pimienta Blanca, Bergamota Verde",
+                    heart: "Salvia Aromática, Madera de Cedro",
+                    base: "Haba Tonka, Cacao Dulce, Madera de Ámbar"
+                }
+            },
+            {
+                id: 23,
+                name: "Bad Boy Cobalt",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Hombre",
+                family: "Amaderada Aromática",
+                desc: "Un giro electrizante cargado de frescura mineral y carácter indomable, inspirado en la potencia visual y fuerza del cobalto.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Pimienta Rosa, Lavanda Fresca",
+                    heart: "Ciruela Dulce, Geranio Silvestre",
+                    base: "Trufa Negra, Vetiver Terroso, Roble, Cedro"
+                }
+            },
+            {
+                id: 24,
+                name: "CH Men",
+                brand: "Inspirado en Carolina Herrera",
+                gender: "Hombre",
+                family: "Ámbar Especiada",
+                desc: "La máxima expresión de elegancia clásica y espíritu de aventura. Una fragancia refinada rica en maderas, cuero y especias finas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Hierba Recién Cortada, Bergamota, Toronja",
+                    heart: "Nuez Moscada, Azafrán, Violeta, Jazmín",
+                    base: "Cuero Robusto, Gamuza, Vainilla Dulce, Sándalo"
+                }
+            },
+            {
+                id: 25,
+                name: "Cool Water",
+                brand: "Inspirado en Davidoff",
+                gender: "Hombre",
+                family: "Aromática Acuática",
+                desc: "La frescura extrema del océano. Un clásico limpio, vigorizante y sumamente energético de brisa marina helada y maderas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Agua de Mar, Menta, Lavanda, Romero",
+                    heart: "Sándalo, Jazmín de Agua, Neroli, Geranio",
+                    base: "Almizcle, Tabaco Rubio, Musgo de Roble, Cedro"
+                }
+            },
+            {
+                id: 26,
+                name: "Fahrenheit",
+                brand: "Inspirado en Dior",
+                gender: "Hombre",
+                family: "Almizcle Amaderado Floral",
+                desc: "Una fragancia legendaria y sumamente revolucionaria caracterizada por sus potentes notas de cuero violeta y acordes ardientes.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1615655404745-a106e570f005?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Flor de Violeta, Lavanda, Mandarina, Cedro",
+                    heart: "Nuez Moscada, Madreselva, Sándalo, Clavel",
+                    base: "Cuero Intenso, Vetiver, Ámbar, Pachulí"
+                }
+            },
+            {
+                id: 27,
+                name: "Invictus",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Hombre",
+                family: "Amaderada Acuática",
+                desc: "El aroma definitivo de la victoria. Un contraste fascinante entre frescura marina helada y sensualidad magnética de maderas finas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Notas Marinas, Toronja, Mandarina",
+                    heart: "Hoja de Laurel Noble, Jazmín de Grasse",
+                    base: "Ámbar Gris, Madera de Guayaco, Musgo de Roble"
+                }
+            },
+            {
+                id: 28,
+                name: "Invictus Legend",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Hombre",
+                family: "Amaderada Aromática",
+                desc: "Un duelo ardiente bajo el sol. La máxima expresión de frescura metálica especiada con acordes salados y miel.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Sal de Mar, Notas Marinas de Escollera, Toronja",
+                    heart: "Especias, Hoja de Laurel, Geranio",
+                    base: "Ámbar Rojo Cálido, Madera de Guayaco"
+                }
+            },
+            {
+                id: 29,
+                name: "Le Male",
+                brand: "Inspirado en Jean Paul Gaultier",
+                gender: "Hombre",
+                family: "Ámbar Fougère",
+                desc: "Un clásico atemporal, sumamente viril y acogedor. Una combinación mítica de lavanda tradicional de barbería y vainilla.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Lavanda, Menta Piperita, Cardamomo, Bergamota",
+                    heart: "Canela Especiada, Flor de Azahar, Alcaravea",
+                    base: "Vainilla Dulce, Haba Tonka, Sándalo, Cedro"
+                }
+            },
+            {
+                id: 30,
+                name: "CK One",
+                brand: "Inspirado en Calvin Klein",
+                gender: "Hombre",
+                family: "Cítrica Aromática",
+                desc: "Ícono indiscutido de libertad y frescura limpia y compartida. Una salida cítrica brillante, ideal para el uso diario relajado.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Limón Exprimido, Notas Verdes, Bergamota, Piña",
+                    heart: "Lirio de los Valles, Jazmín Radiante, Violeta, Rosa",
+                    base: "Almizcle Limpio, Madera de Cedro, Sándalo, Ámbar"
+                }
+            },
+            {
+                id: 31,
+                name: "1 Million",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Hombre",
+                family: "Amaderada Especiada",
+                desc: "Un aroma sumamente dulce, potente e intensamente adictivo. Abre con mandarina fresca y se funde en canela picante y cuero.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1615655404745-a106e570f005?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Mandarina Sanguínea, Toronja, Menta Fresca",
+                    heart: "Canela Fina, Notas Especiadas, Rosa de Damasco",
+                    base: "Ámbar Cálido, Cuero Macho, Maderas Blancas, Pachulí"
+                }
+            },
+            {
+                id: 32,
+                name: "Phantom",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Hombre",
+                family: "Amaderada Aromática",
+                desc: "Fragancia ultramoderna nacida de la combinación entre lujo artesanal y tecnología. Lavanda cremosa y limón enérgico.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Cáscara de Limón, Limón de Amalfi, Lavanda",
+                    heart: "Manzana Crujiente, Humo, Notas de Tierra, Pachulí",
+                    base: "Vainilla Especiada, Lavanda de Campo, Vetiver"
+                }
+            },
+            {
+                id: 33,
+                name: "Polo Green",
+                brand: "Inspirado en Ralph Lauren",
+                gender: "Hombre",
+                family: "Amaderada Chipre",
+                desc: "Un gran clásico sumamente masculino, elegantemente tradicional. Notas ricas de pino, tabaco silvestre y cuero antiguo.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Bayas de Enebro, Albahaca, Alcaravea, Artemisa",
+                    heart: "Agujas de Pino, Cuero, Manzanilla, Clavel, Rosa",
+                    base: "Tabaco Rubio, Musgo de Roble, Pachulí, Vetiver"
+                }
+            },
+            {
+                id: 34,
+                name: "Pure XS For Men",
+                brand: "Inspirado en Paco Rabanne",
+                gender: "Hombre",
+                family: "Aromática Especiada",
+                desc: "Una fragancia sumamente magnética e incandescente que contrasta un jengibre helado con una vainilla carnal adictiva.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Jengibre Picante, Tomillo, Acorde Verde, Bergamota",
+                    heart: "Vainilla Cremosa, Licor, Canela de Ceilán, Cuero",
+                    base: "Mirra, Azúcar Quemada, Madera de Cedro, Sándalo"
+                }
+            },
+            {
+                id: 35,
+                name: "Sauvage",
+                brand: "Inspirado en Dior",
+                gender: "Hombre",
+                family: "Aromática Fougère",
+                desc: "Una composición de frescura radical y salvaje. Resalta por sus notas frescas de bergamota de Calabria y pimienta de Sichuan.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Bergamota de Calabria, Pimienta Negra, Lavanda",
+                    heart: "Pimienta de Sichuan, Vetiver, Pachulí",
+                    base: "Ambroxan Premium, Cedro, Ládano"
+                }
+            },
+            {
+                id: 36,
+                name: "Scandal Pour Homme",
+                brand: "Inspirado en Jean Paul Gaultier",
+                gender: "Hombre",
+                family: "Ámbar Amaderada",
+                desc: "Una entrada triunfal cargada de sensualidad energética. Exquisito caramelo dulce contrastado con haba tonka y vetiver.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1615655404745-a106e570f005?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Esclarea Silvestre, Mandarina Jugosa",
+                    heart: "Caramelo Líquido, Haba Tonka",
+                    base: "Vetiver de Haití"
+                }
+            },
+            {
+                id: 37,
+                name: "Wanted",
+                brand: "Inspirado en Azzaro",
+                gender: "Hombre",
+                family: "Amaderada Especiada",
+                desc: "La fragancia del hombre libre que desafía su propio destino. Choque vibrante de limón ácido, jengibre y cardamomo.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Limón de Amalfi, Jengibre, Lavanda, Menta",
+                    heart: "Cardamomo de Guatemala, Manzana Verde, Geranio",
+                    base: "Vetiver de Haití, Haba Tonka, Amberwood"
+                }
+            },
+            {
+                id: 38,
+                name: "Y Eau de Parfum",
+                brand: "Inspirado en Yves Saint Laurent",
+                gender: "Hombre",
+                family: "Aromática Fougère",
+                desc: "Retrato olfativo del hombre contemporáneo que logra sus metas. Frescura de manzana y jengibre sobre salvia y maderas intensas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Manzana Crujiente, Jengibre Fresco, Bergamota",
+                    heart: "Salvia Aromática, Bayas de Enebro, Geranio",
+                    base: "Amberwood, Haba Tonka, Cedro de Virginia, Vetiver"
+                }
+            },
+
+            // --- LÍNEA UNISEX ---
+            {
+                id: 39,
+                name: "Baccarat Rouge 540",
+                brand: "Inspirado en Maison Francis Kurkdjian",
+                gender: "Unisex",
+                family: "Amber Floral",
+                desc: "La máxima joya de la perfumería conceptual moderna. Un aroma dulce, mineral y sumamente sofisticado de azafrán con maderas resinosas.",
+                imgReplica: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600",
+                imgOriginal: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=600",
+                notes: {
+                    top: "Azafrán, Jazmín",
+                    heart: "Amberwood, Ámbar Gris",
+                    base: "Resina de Abeto, Cedro"
+                }
+            }
+        ];
+
+        // Estado Interno de la Aplicación
+        let activeFilter = 'all';
+        let searchQuery = '';
+        
+        // Registramos el tamaño que selecciona el usuario por cada tarjeta de producto
+        const productSelections = {}; 
+        perfumes.forEach(p => {
+            productSelections[p.id] = 30; // Predeterminado: 30 ml
+        });
+
+        // Tabla de precios oficiales
+        const prices = {
+            30: 12000,
+            50: 18000
+        };
+
+        // Evento de inicialización al cargar la ventana
+        window.onload = function() {
+            renderCatalog();
+        };
+
+        // Control de Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-xl';
+            }
+        }
+
+        // Sistema elegante de mensajes Toast informativos
+        function showToast(message, type = "success") {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `flex items-center gap-3 px-4 py-3 shadow-lg rounded text-xs tracking-wider uppercase font-medium border text-white transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto max-w-sm`;
+            
+            if (type === "success") {
+                toast.classList.add('bg-stone-900', 'border-luxe-gold');
+            } else {
+                toast.classList.add('bg-emerald-900', 'border-stone-500');
+            }
+            
+            toast.innerHTML = `
+                <i class="${type === 'success' ? 'fa-solid fa-circle-check text-luxe-gold' : 'fa-solid fa-circle-exclamation text-emerald-300'}"></i>
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Entrada suave
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+            
+            // Destrucción automática a los 3 segundos
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Motor de Renderizado del Catálogo de Productos con Corte Diagonal
+        function renderCatalog() {
+            const grid = document.getElementById('perfume-grid');
+            const noResults = document.getElementById('no-results');
+            
+            // Proceso de filtrado
+            let filtered = perfumes.filter(item => {
+                const matchesCategory = activeFilter === 'all' || item.gender === activeFilter;
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      item.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.family.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.notes.top.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.notes.heart.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            // Dibujado en pantalla
+            if (filtered.length === 0) {
+                grid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                grid.classList.remove('hidden');
+                noResults.classList.add('hidden');
+            }
+
+            grid.innerHTML = filtered.map(product => {
+                const selectedSize = productSelections[product.id];
+                const displayedPrice = prices[selectedSize];
+
+                return `
+                    <div class="group bg-white rounded border border-stone-100 hover:border-luxe-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                        
+                        <!-- Contenedor Visual con División Diagonal de Imágenes -->
+                        <div class="relative aspect-[4/5] overflow-hidden bg-stone-50 cursor-pointer" onclick="openDetailModal(${product.id})">
+                            
+                            <!-- Imagen Superior/Derecha (Original de Diseñador) -->
+                            <img src="${product.imgOriginal}" alt="Original" class="absolute inset-0 w-full h-full object-cover original-clip transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600'">
+                            
+                            <!-- Imagen Inferior/Izquierda (Réplica Premium) -->
+                            <img src="${product.imgReplica}" alt="Réplica" class="absolute inset-0 w-full h-full object-cover replica-clip transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&q=80&w=600'">
+                            
+                            <!-- Línea de corte diagonal en color Oro Clásico -->
+                            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom right, transparent calc(50% - 1.5px), #D4AF37 50%, transparent calc(50% + 1.5px));"></div>
+
+                            <!-- Leyendas explicativas sobre las mitades divididas -->
+                            <span class="absolute bottom-3 left-3 bg-luxe-dark/90 text-luxe-gold text-[8px] font-semibold tracking-widest px-2 py-0.5 rounded uppercase border border-luxe-gold/30">
+                                Réplica
+                            </span>
+                            <span class="absolute top-3 right-3 bg-white/90 text-stone-900 text-[8px] font-semibold tracking-widest px-2 py-0.5 rounded uppercase border border-stone-200">
+                                Original
+                            </span>
+
+                            <!-- Categoría de Público (Damas/Caballeros/Unisex) -->
+                            <span class="absolute top-3 left-3 bg-luxe-dark/90 text-white border border-luxe-gold/30 text-[9px] font-semibold tracking-widest px-3 py-1 uppercase rounded-full">
+                                ${product.gender}
+                            </span>
+                        </div>
+                        
+                        <!-- Cuerpo Informativo de la Tarjeta -->
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start gap-2 mb-1">
+                                    <span class="text-[10px] uppercase tracking-widest text-stone-400 font-medium">${product.family}</span>
+                                    <span class="text-[9px] bg-stone-100 text-stone-600 px-2 py-0.5 rounded uppercase font-semibold tracking-wider">${product.brand}</span>
+                                </div>
+                                <h3 onclick="openDetailModal(${product.id})" class="font-serif text-xl font-light text-luxe-dark cursor-pointer hover:text-luxe-gold transition-colors">${product.name}</h3>
+                                <p class="text-xs text-stone-500 line-clamp-2 mt-2 leading-relaxed font-light">${product.desc}</p>
+                            </div>
+
+                            <div class="mt-4">
+                                <!-- Selector de tamaño de fácil acceso directamente en la tarjeta -->
+                                <div class="flex items-center justify-between mb-4 bg-stone-50 p-1.5 rounded border border-stone-100">
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-stone-500 pl-1">Medida:</span>
+                                    <div class="flex gap-1">
+                                        <button onclick="setCardSize(${product.id}, 30)" class="px-3 py-1 rounded text-[10px] uppercase font-bold tracking-wider transition-all ${selectedSize === 30 ? 'bg-luxe-dark text-white' : 'bg-transparent text-stone-600 hover:bg-stone-200'}">
+                                            30 ml
+                                        </button>
+                                        <button onclick="setCardSize(${product.id}, 50)" class="px-3 py-1 rounded text-[10px] uppercase font-bold tracking-wider transition-all ${selectedSize === 50 ? 'bg-luxe-dark text-white' : 'bg-transparent text-stone-600 hover:bg-stone-200'}">
+                                            50 ml
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between border-t border-stone-100 pt-4">
+                                    <span class="font-serif text-lg font-bold text-luxe-dark">$${displayedPrice.toLocaleString('es-AR')}</span>
+                                    <div class="flex gap-1.5 w-full justify-end">
+                                        <button onclick="openDetailModal(${product.id})" class="px-2.5 py-2 text-stone-500 hover:text-luxe-dark border border-stone-200 hover:border-stone-400 rounded text-[10px] uppercase tracking-wider transition-colors" title="Ver notas y detalles">
+                                            Notas
+                                        </button>
+                                        <button onclick="orderDirectly(${product.id})" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-[10px] uppercase tracking-widest transition-colors font-bold flex items-center gap-1 shadow-md">
+                                            <i class="fa-brands fa-whatsapp text-xs"></i> Pedir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Seteo de medida de envase desde la tarjeta
+        function setCardSize(productId, size) {
+            productSelections[productId] = size;
+            renderCatalog();
+        }
+
+        // Lógica de filtrado por categoría
+        function setFilter(gender) {
+            activeFilter = gender;
+            const buttons = document.querySelectorAll('#filter-buttons button');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-luxe-dark', 'text-white', 'active');
+                btn.classList.add('bg-stone-100', 'text-stone-700');
+            });
+            
+            const activeBtn = event.currentTarget;
+            activeBtn.classList.remove('bg-stone-100', 'text-stone-700');
+            activeBtn.classList.add('bg-luxe-dark', 'text-white', 'active');
+
+            renderCatalog();
+        }
+
+        // Manejo de búsqueda textual en vivo
+        function searchPerfumes() {
+            const input = document.getElementById('catalog-search');
+            searchQuery = input.value;
+            renderCatalog();
+        }
+
+        function clearSearch() {
+            document.getElementById('catalog-search').value = '';
+            searchQuery = '';
+            renderCatalog();
+        }
+
+        // Controladores del Modal de Detalle
+        let activeModalProductId = null;
+        let activeModalSelectedSize = 30;
+
+        function openDetailModal(productId) {
+            const product = perfumes.find(p => p.id === productId);
+            if (!product) return;
+
+            activeModalProductId = productId;
+            activeModalSelectedSize = productSelections[productId] || 30;
+
+            // Inyección de imágenes cortadas en diagonal en el Modal
+            document.getElementById('modal-img-original').src = product.imgOriginal;
+            document.getElementById('modal-img-original').onerror = function() {
+                this.onerror = null;
+                this.src = 'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=600';
+            };
+            document.getElementById('modal-img-replica').src = product.imgReplica;
+            
+            document.getElementById('modal-product-tag').textContent = product.gender;
+            document.getElementById('modal-product-brand').textContent = product.brand;
+            document.getElementById('modal-product-name').textContent = product.name;
+            document.getElementById('modal-product-desc').textContent = product.desc;
+            
+            // Pirámide olfativa
+            document.getElementById('modal-notes-top').textContent = product.notes.top;
+            document.getElementById('modal-notes-heart').textContent = product.notes.heart;
+            document.getElementById('modal-notes-base').textContent = product.notes.base;
+
+            updateModalSizeUI();
+
+            document.getElementById('detail-modal').classList.remove('hidden');
+        }
+
+        function setModalSize(size) {
+            activeModalSelectedSize = size;
+            productSelections[activeModalProductId] = size;
+            updateModalSizeUI();
+            renderCatalog(); // Sincroniza visualmente la tarjeta de fondo
+        }
+
+        // Actualiza el precio y el estado del botón dentro del modal
+        function updateModalSizeUI() {
+            const btn30 = document.getElementById('modal-size-30');
+            const btn50 = document.getElementById('modal-size-50');
+            const priceEl = document.getElementById('modal-product-price');
+
+            const price = prices[activeModalSelectedSize];
+            priceEl.textContent = `$${price.toLocaleString('es-AR')}`;
+
+            if (activeModalSelectedSize === 30) {
+                btn30.className = "flex-grow py-2 border border-luxe-dark bg-luxe-dark text-white rounded text-xs tracking-wider uppercase font-semibold transition-all";
+                btn50.className = "flex-grow py-2 border border-stone-200 bg-transparent text-stone-600 hover:bg-stone-50 rounded text-xs tracking-wider uppercase font-semibold transition-all";
+            } else {
+                btn30.className = "flex-grow py-2 border border-stone-200 bg-transparent text-stone-600 hover:bg-stone-50 rounded text-xs tracking-wider uppercase font-semibold transition-all";
+                btn50.className = "flex-grow py-2 border border-luxe-dark bg-luxe-dark text-white rounded text-xs tracking-wider uppercase font-semibold transition-all";
+            }
+
+            const addBtn = document.getElementById('modal-add-btn');
+            addBtn.innerHTML = `<i class="fa-brands fa-whatsapp mr-2 text-base"></i> Pedir por WhatsApp`;
+            addBtn.className = "mt-6 w-full py-3 bg-emerald-600 text-white rounded font-bold text-xs tracking-[0.2em] uppercase hover:bg-emerald-700 transition-colors duration-300 flex items-center justify-center shadow-md";
+            addBtn.onclick = function() {
+                orderDirectlyWithOptions(activeModalProductId, activeModalSelectedSize);
+                closeDetailModal();
+            };
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detail-modal').classList.add('hidden');
+        }
+
+        // Envía una consulta directa por el perfume de la tarjeta
+        function orderDirectly(productId) {
+            const size = productSelections[productId];
+            orderDirectlyWithOptions(productId, size);
+        }
+
+        // Abre WhatsApp con los datos del perfume elegido
+        function orderDirectlyWithOptions(productId, size) {
+            const product = perfumes.find(p => p.id === productId);
+            if (!product) return;
+
+            const phoneNumber = "5492954599491";
+
+            // Mensaje directo y preciso solicitado
+            let message = `Hola! quiero preguntar si tienen disponibles el ${product.name} de ${size} ml`;
+
+            const encodedText = encodeURIComponent(message);
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
+
+            showToast("Abriendo WhatsApp para consultar disponibilidad...", "info");
+
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 800);
+        }
+    </script>
+</body>
+</html>
